@@ -1,7 +1,12 @@
 import React from 'react'
 
-export default function layout() {
-  return (
-    <div>layout</div>
+export default function layout({ children }: {
+    children: React.ReactNode;
+}) {
+    return (
+        <>
+        {children}
+      <div>layout</div>
+    </>
   )
 }
