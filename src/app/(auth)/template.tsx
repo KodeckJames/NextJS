@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const navLinks = [
     { name: "Register", href: "/register" },
@@ -14,9 +15,13 @@ export default function AuthLayout({
 }: {
     children: React.ReactNode
     }) {
+    const [input, setInput] = useState("");
     const pathname = usePathname()
     return (
         <div className=" flex flex-col">
+            <div>
+                <input value={input} onChange={(e)=> setInput(e.target.value)} />
+            </div>
             {navLinks.map((link) => {
                 const isActive = pathname === link.href || (pathname.startsWith(link.href) && link.href !== "/");
                 return (
