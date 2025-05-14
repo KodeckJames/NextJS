@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ErrorWrapper } from "./error-wrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,8 +33,11 @@ export default function RootLayout({
         <p>
           This is the <span className=" italic font-bold">header</span> 
         </p>
-      </header>
+        </header>
+        <ErrorWrapper>
         {children}
+        </ErrorWrapper>
+        
         <footer className=" flex justify-center ">
         <p>
           This is the <span className=" italic font-bold">footer</span> 
