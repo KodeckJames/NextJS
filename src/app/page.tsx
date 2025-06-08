@@ -11,6 +11,7 @@ export default function Home() {
       <Link href="/products">products</Link>
       <Link href="/articles/breaking-news-123?lang=en">Read in English</Link>
         <Link href="/articles/breaking-news-123?lang=fr">Read in French</Link>
+        <Link href={'/profile'}><button className=" bg-blue-700 rounded-lg p-2 cursor-pointer" >Profile</button></Link>
         </div>
     </>
   )
