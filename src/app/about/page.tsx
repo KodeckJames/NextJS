@@ -1,11 +1,19 @@
+import { cookies } from "next/headers"
+
+
+
 export const metadata = {
   title: "About me",
 }
 
-function page() {
+import React from 'react'
+
+export default async function AboutPage() {
+  const cookieStore = await cookies();
+  const theme = cookieStore.get("theme");
+  console.log(theme);
+  
   return (
-    <div>About me {new Date().toLocaleTimeString() }</div>
+    <div>AboutPage</div>
   )
 }
-
-export default page
