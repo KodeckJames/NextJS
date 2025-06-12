@@ -14,16 +14,16 @@ export const ImageSlider=()=> {
     <div className="image-slider-container">
       <Slider {...settings}>
         <div>
-          <Image src="https://picsum.photos/400/200" alt="Slide Image" />
+          <Image src="https://picsum.photos/400/200" alt="Slide Image" width={1200} height={600} />
         </div>
         <div>
-          <Image src="https://picsum.photos/400/200" alt="Slide Image" />
+          <Image src="https://picsum.photos/400/200" alt="Slide Image" width={1200} height={600} />
         </div>
         <div>
-          <Image src="https://picsum.photos/400/200" alt="Slide Image" />
+          <Image src="https://picsum.photos/400/200" alt="Slide Image" width={1200} height={600} />
         </div>
         <div>
-          <Image src="https://picsum.photos/400/200" alt="Slide Image" />
+          <Image src="https://picsum.photos/400/200" alt="Slide Image" width={1200} height={600} />
         </div>
       </Slider>
     </div>
