@@ -9,6 +9,7 @@ type User = {
 import React from 'react'
 
 export default async function page() {
+    await new Promise((resolve)=>setTimeout(resolve, 5000))
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
     const users: User[] = await response.json();
     console.log(users);
