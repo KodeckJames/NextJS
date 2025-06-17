@@ -2,11 +2,12 @@ import {
   SignInButton,
   SignOutButton,
   SignUpButton,
-  // UserButton,
+  //   UserButton,
   SignedIn,
   SignedOut,
-} from "@clerk/nextjs";
-import Link from "next/link";
+} from '@clerk/nextjs'
+import Link from 'next/link'
+
 export const Navigation = () => {
   return (
     <nav className="bg-[var(--background)] border-b border-[var(--foreground)]/10">
@@ -32,12 +33,13 @@ export const Navigation = () => {
             </SignedOut>
             <SignedIn>
               <Link href="/user-profile">Profile</Link>
-              <SignOutButton />
               {/* <UserButton /> */}
+              <Link href="/user-profile">Profile</Link>
+              <SignOutButton />
             </SignedIn>
           </div>
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
