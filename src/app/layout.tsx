@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ErrorWrapper } from "./error-wrapper";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Navigation } from "@/components/navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,11 +34,7 @@ export default function RootLayout({
           <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
           >
-             <header className=" flex justify-center ">
-            <p>
-              This is the <span className=" italic font-bold">header</span>
-            </p>
-            </header>
+            <Navigation/>
             <ErrorWrapper>
             {children}
             </ErrorWrapper>
