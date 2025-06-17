@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ErrorWrapper } from "./error-wrapper";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,28 +26,30 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-     
-      <ThemeProvider>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-           <header className=" flex justify-center ">
-          <p>
-            This is the <span className=" italic font-bold">header</span>
-          </p>
-          </header>
-          <ErrorWrapper>
-          {children}
-          </ErrorWrapper>
-        
-          <footer className=" flex justify-center ">
-          <p>
-            This is the <span className=" italic font-bold">footer</span>
-          </p>
-        </footer>
-        </body>
-      </ThemeProvider>      
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+      
+        <ThemeProvider>
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          >
+             <header className=" flex justify-center ">
+            <p>
+              This is the <span className=" italic font-bold">header</span>
+            </p>
+            </header>
+            <ErrorWrapper>
+            {children}
+            </ErrorWrapper>
+      
+            <footer className=" flex justify-center ">
+            <p>
+              This is the <span className=" italic font-bold">footer</span>
+            </p>
+          </footer>
+          </body>
+        </ThemeProvider>
+      </html>
+    </ClerkProvider>
   );
 }
