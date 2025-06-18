@@ -1,5 +1,6 @@
-import Link from 'next/link'
-import { Search } from '@/components/search'
+import Link from 'next/link';
+import { Search } from '@/components/search';
+import { Counter } from '@/components/counter';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
           </button>
         </Link>
         <Link href={'/dashboardRSC'}>Dashboard</Link>
+        <Counter/>
       </div>
     </>
   )
