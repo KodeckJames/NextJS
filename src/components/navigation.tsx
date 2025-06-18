@@ -1,7 +1,7 @@
 import {
   SignInButton,
   SignOutButton,
-//   SignUpButton,
+  SignUpButton,
   //   UserButton,
   SignedIn,
   SignedOut,
@@ -25,11 +25,11 @@ export const Navigation = () => {
                   Sign In
                 </button>
               </SignInButton>
-              {/* <SignUpButton mode="modal">
+              <SignUpButton mode="modal">
                 <button className="px-2 py-1 text-sm border border-neutral-300 dark:border-neutral-600 dark:text-neutral-200 dark:hover:bg-neutral-700">
                   Sign Up
                 </button>
-              </SignUpButton> */}
+              </SignUpButton>
             </SignedOut>
             <SignedIn>
               {/* <UserButton /> */}
